@@ -13,16 +13,16 @@ def is_enabled(value, default):
 #---------------------------------------------------------------
 #---------------------------------------------------------------         ,
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '24882075'))
-API_HASH = environ.get('API_HASH', 'db6286a041adf07ef4244e')
-BOT_TOKEN = environ.get('BOT_TOKEN', '37837f690b26902ab57ef8dd5e41021')
+API_ID = int(environ.get('API_ID', '29563132'))
+API_HASH = environ.get('API_HASH', 'b39be032fc0c567d0cda60dbea99606e')
+BOT_TOKEN = environ.get('BOT_TOKEN', '8086177634:AAFgGrD0Kap5mTyMnQOx-5p9_GKZyMdKg60')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7344196360').split()]
-USERNAME = environ.get('USERNAME', "https://t.me/creazy_banda") # ADMIN USERNAME
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002343108040'))
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/creazymoviesurchgroup')
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002236030496').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6400371201').split()]
+USERNAME = environ.get('USERNAME', "https://t.me/Leazy_Boy") # ADMIN USERNAME
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002187892688'))
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/allmovierequesthub')
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002434067416').split()]
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mailmetosaikat676:saikat9735@cluster0.2esif.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -39,7 +39,7 @@ auth_channel = environ.get('AUTH_CHANNEL', '-1002147914741')
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '0'))
 request_channel = environ.get('REQUEST_CHANNEL', '0')
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '0'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/creazymoviesurchgroup') #Support group link ( make sure bot is admin )
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/leazy_support_group') #Support group link ( make sure bot is admin )
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 IS_VERIFY = is_enabled('IS_VERIFY', True)
