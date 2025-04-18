@@ -808,7 +808,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
                         ],[
-                            InlineKeyboardButton("🏷 ᴛʀᴇɴᴅɪɴɢ", callback_data='trending),
+                            InlineKeyboardButton("🏷 ᴛʀᴇɴᴅɪɴɢ", callback_data='trending'),
                             InlineKeyboardButton('🎟 ᴜᴘɢʀᴀᴅᴇ', callback_data='seeplans')
                         ],[
                             InlineKeyboardButton('📝 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 📝', url=f'http://t.me/mvvaibhav')
