@@ -81,10 +81,10 @@ async def get_poster(query, bulk=False, id=False, file=None):
     else:
         movieid = query
     movie = imdb.get_movie(movieid)
-    if movie.get("original air date"):
-        date = movie["original air date"]
-    elif movie.get("year"):
-        date = movie.get("year")
+    if movie.get("ᴏʀɪɢɪɴᴀʟ ᴀɪʀ ᴅᴀᴛᴇ"):
+        date = movie["ᴏʀɪɢɪɴᴀʟ ᴀɪʀ ᴅᴀᴛᴇ"]
+    elif movie.get("ʏᴇᴀʀ"):
+        date = movie.get("ʏᴇᴀʀ")
     else:
         date = "N/A"
     plot = ""
@@ -222,7 +222,7 @@ async def get_shortlink(link, grp_id, is_second_shortener=False, is_third_shorte
             link = await shortzy.get_quick_link(link)
     return link
 
-def get_file_id(message: "Message") -> Any:
+def get_file_id(message: "📃 ᴍᴇssᴀɢᴇ ") -> Any:
     media_types = (
         "audio",
         "document",
@@ -248,11 +248,11 @@ def get_status():
     tz = pytz.timezone('Asia/Colombo')
     hour = datetime.now(tz).time().hour
     if 5 <= hour < 12:
-        sts = "𝐺𝑜𝑜𝑑 𝑀𝑜𝑟𝑛𝑖𝑛𝑔"
+        sts = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ"
     elif 12 <= hour < 18:
-        sts = "𝐺𝑜𝑜𝑑 𝐴𝑓𝑡𝑒𝑟𝑛𝑜𝑜𝑛"
+        sts = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ"
     else:
-        sts = "𝐺𝑜𝑜𝑑 𝐸𝑣𝑒𝑛𝑖𝑛𝑔"
+        sts = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ"
     return sts
 
 async def is_check_admin(bot, chat_id, user_id):
