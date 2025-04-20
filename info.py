@@ -52,12 +52,12 @@ SHORTENER_API2 = environ.get("SHORTENER_API2", "be8b066888466b4de6ed6b96744c6e97
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'mdiskshortner.link')
 SHORTENER_API3 = environ.get("SHORTENER_API3", "be8b066888466b4de6ed6b96744c6e9746a5796b")
 SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'mdiskshortner.link')
-TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "14400"))
+TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "300"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "14400"))
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam", "bengali", "marathi", "gujarati", "punjabi"]
-QUALITIES = ["HdRip","web-dl" ,"bluray", "hdr", "fhd" , "240p", "360p", "480p", "540p", "720p", "960p", "1080p", "1440p", "2K", "2160p", "4k", "5K", "8K"]
+QUALITIES = ["480p", "720p", "1080p", "2160p"]
 YEARS = [f'{i}' for i in range(2024 , 2002,-1 )]
 SEASONS = [f'season {i}'for i in range (1 , 23)]
 REF_PREMIUM = 30
@@ -68,18 +68,18 @@ REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-START_IMG = (environ.get('START_IMG', 'https://i.ibb.co/qpxpGmC/image.jpg https://i.ibb.co/DQ35zLZ/image.jpg')).split()
+START_IMG = (environ.get('START_IMG', 'https://envs.sh/YoH.jpg')).split()
 FORCESUB_IMG = environ.get('FORCESUB_IMG', 'https://i.ibb.co/ZNC1Hnb/ad3f2c88a8f2.jpg')
 REFER_PICS = (environ.get("REFER_PICS", "https://envs.sh/PSI.jpg")).split() 
-PAYPICS = (environ.get('PAYPICS', 'https://envs.sh/_kA.jpg')).split()
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/9f3f47c690bbcc67633c2.jpg'))
-REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
+PAYPICS = (environ.get('PAYPICS', 'https://graph.org/file/5b4531bb88bad855e4680.jpg')).split()
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/5b4531bb88bad855e4680.jpg'))
+REACTIONS = ["⚡"]
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '600'))
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
-IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', False)
+IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', True)
 PORT = environ.get('PORT', '5000')
 MAX_BTN = int(environ.get('MAX_BTN', '8'))
 AUTO_DELETE = is_enabled('AUTO_DELETE', True)
