@@ -930,7 +930,7 @@ async def most(client, callback_query):
         placeholder="Most searches of the day"
     )
     
-    await callback_query.message.reply_text("<b>Hᴇʀᴇ ɪꜱ ᴛʜᴇ ᴍᴏꜱᴛ ꜱᴇᴀʀᴄʜᴇꜱ ʟɪꜱᴛ 👇</b>", reply_markup=reply_markup)
+    await callback_query.message.reply_text("<b>✨️ ʜᴇʀᴇ ᴀʀᴇ ᴛʜᴇ ᴛʀᴇɴᴅɪɴɢ ꜱᴇᴀʀᴄʜᴇꜱ ᴏꜰ ᴛʜᴇ ᴅᴀʏ -</b>", reply_markup=reply_markup)
     await callback_query.answer()
 
 
@@ -938,14 +938,14 @@ async def most(client, callback_query):
 async def top(client, query):
     movie_series_names = await movie_series_db.get_movie_series_names(1)
     if not movie_series_names:
-        await query.message.reply("Tʜᴇʀᴇ ᴀʀᴇ ɴᴏ ᴍᴏᴠɪᴇ ᴏʀ sᴇʀɪᴇs ɴᴀᴍᴇs ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛʜᴇ ᴛᴏᴘ sᴇᴀʀᴄʜᴇs.")
+        await query.message.reply("ᴛʜᴇʀᴇ ᴀʀᴇ ɴᴏ ᴍᴏᴠɪᴇ ᴏʀ sᴇʀɪᴇs ɴᴀᴍᴇs ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛʜᴇ ᴛᴏᴘ sᴇᴀʀᴄʜᴇs.")
         return
     buttons = [movie_series_names[i:i + 2] for i in range(0, len(movie_series_names), 2)]
     spika = ReplyKeyboardMarkup(
         buttons,
         resize_keyboard=True
     )
-    await query.message.reply("<b>Here Is The Top Trending List 👇</b>", reply_markup=spika)
+    await query.message.reply("<b>✨️ ʜᴇʀᴇ ᴀʀᴇ ᴛʜᴇ ᴛʀᴇɴᴅɪɴɢ ꜱᴇᴀʀᴄʜᴇꜱ ᴏꜰ ᴛʜᴇ ᴅᴀʏ -</b>", reply_markup=spika)
     
 @Client.on_message(filters.command("refer"))
 async def refer(bot, message):
