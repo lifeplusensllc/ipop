@@ -103,10 +103,10 @@ class script(object):
 <b>❗️ ʟᴀɴɢᴜᴀɢᴇ - {languages}</b>
 """
 
-    FILE_CAPTION = """<b>**[{file_name}](https://t.me/mvvaibhav)
+    FILE_CAPTION = """<b>[{file_name}](https://t.me/mvvaibhav)
 ╔════════════════════════╗
 🌼нαρρу ∂σωηℓσα∂ιηg αη∂ ¢σмє αgαιη🌸
-╚════════════════════════╝**</b>"""
+╚════════════════════════╝</b>"""
     
 
     ALRT_TXT = """ᴊᴀʟᴅɪ ʏᴇʜᴀ sᴇ ʜᴀᴛᴏ !"""
