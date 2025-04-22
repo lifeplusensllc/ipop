@@ -28,7 +28,7 @@ async def index_files(bot, query):
 @Client.on_message(filters.command('index') & filters.private & filters.incoming & filters.user(ADMINS))
 async def send_for_index(bot, message):
     if lock.locked():
-        return await message.reply('Wait until previous process complete.')
+        return await message.reply('<b><i>ᴡᴀɪᴛ ᴜɴᴛɪʟ ᴘʀᴇᴠɪᴏᴜs ᴘʀᴏᴄᴇss ᴄᴏᴍᴘʟᴇᴛᴇ... 🧭</i></b>')
     i = await message.reply("<b><i>ғᴏʀᴡᴀʀᴅ ʟᴀsᴛ ᴍᴇssᴀɢᴇ ᴏʀ sᴇɴᴅ ʟᴀsᴛ ᴍᴇssᴀɢᴇ ʟɪɴᴋ. 💬 </i></b>")
     msg = await bot.listen(chat_id=message.chat.id, user_id=message.from_user.id)
     await i.delete()
@@ -46,42 +46,42 @@ async def send_for_index(bot, message):
         last_msg_id = msg.forward_from_message_id
         chat_id = msg.forward_from_chat.username or msg.forward_from_chat.id
     else:
-        await message.reply('<b><i>ᴛʜɪs ɪs ɴᴏᴛ ғᴏʀᴡᴀʀᴅᴇᴅ ᴍᴇssᴀɢᴇ ᴏʀ ʟɪɴᴋ.</i></b>')
+        await message.reply('<b><i>ᴛʜɪs ɪs ɴᴏᴛ ғᴏʀᴡᴀʀᴅᴇᴅ ᴍᴇssᴀɢᴇ ᴏʀ ʟɪɴᴋ. ❗️</i></b>')
         return
     try:
         chat = await bot.get_chat(chat_id)
     except Exception as e:
         return await message.reply(f'Errors - {e}')
     if chat.type != enums.ChatType.CHANNEL:
-        return await message.reply("<b><i>I can index only channels.</i></b>")
+        return await message.reply("<b><i>ɪ ᴄᴀɴ ɪɴᴅᴇx ᴏɴʟʏ ᴄʜᴀɴɴᴇʟs. ⛔️</i></b>")
     s = await message.reply("Send skip message number.")
     msg = await bot.listen(chat_id=message.chat.id, user_id=message.from_user.id)
     await s.delete()
     try:
         skip = int(msg.text)
     except:
-        return await message.reply("ɴᴜᴍʙᴇʀ ɪs ɪɴᴠᴀʟɪᴅ 📵")
+        return await message.reply("**ɴᴜᴍʙᴇʀ ɪs ɪɴᴠᴀʟɪᴅ 📵**")
     buttons = [[
         InlineKeyboardButton('ʏᴇs ✅', callback_data=f'index#yes#{chat_id}#{last_msg_id}#{skip}')
     ],[
         InlineKeyboardButton('ᴄʟᴏsᴇ 🚫', callback_data='close_data'),
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply(f'Do you want to index {chat.title} channel?\nTotal Messages: <code>{last_msg_id}</code>', reply_markup=reply_markup)
+    await message.reply(f'**ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɪɴᴅᴇx ᴛʜɪs {chat.title} ᴄʜᴀɴɴᴇʟ ❓\nᴛᴏᴛᴀʟ ᴍᴇssᴀɢᴇs - <code>{last_msg_id}</code>**', reply_markup=reply_markup)
 
 @Client.on_message(filters.command('channel'))
 async def channel_info(bot, message):
     if message.from_user.id not in ADMINS:
-        await message.reply('ᴏɴʟʏ ᴛʜᴇ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ... 😑')
+        await message.reply('**ᴏɴʟʏ ᴛʜᴇ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ... 😑**')
         return
     ids = CHANNELS
     if not ids:
-        return await message.reply("Not set CHANNELS")
-    text = '**Indexed Channels:**\n\n'
+        return await message.reply("**🚫 ɴᴏᴛ sᴇᴛ ᴄʜᴀɴɴᴇʟs 🚫**")
+    text = '**ɪɴᴅᴇxᴇᴅ ᴄʜᴀɴɴᴇʟs 💭**\n\n'
     for id in ids:
         chat = await bot.get_chat(id)
         text += f'{chat.title}\n'
-    text += f'\n**Total:** {len(ids)}'
+    text += f'\n**ᴛᴏᴛᴀʟ -** {len(ids)}'
     await message.reply(text)
 
 async def index_files_to_db(lst_msg_id, chat, msg, bot, skip):
@@ -100,14 +100,14 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot, skip):
                 time_taken = get_readable_time(time.time()-start_time)
                 if temp.CANCEL:
                     temp.CANCEL = False
-                    await msg.edit(f"Successfully Cancelled!\nCompleted in {time_taken}\n\nSaved <code>{total_files}</code> files to Database!\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>\nUnsupported Media: <code>{unsupported}</code>\nErrors Occurred: <code>{errors}</code>")
+                    await msg.edit(f"**» sᴜᴄᴄᴇssғᴜʟʟʏ ᴄᴀɴᴄᴇʟʟᴇᴅ\n» ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ {time_taken}\n\n» sᴀᴠᴇᴅ - <code>{total_files}</code> ғɪʟᴇs ᴛᴏ ᴅᴀᴛᴀʙᴀsᴇ!\n» ᴅᴜᴘʟɪᴄᴀᴛᴇ ғɪʟᴇs sᴋɪᴘᴘᴇᴅ - <code>{duplicate}</code>\n» ᴅᴇʟᴇᴛᴇᴅ ᴍᴇssᴀɢᴇs sᴋɪᴘᴘᴇᴅ - <code>{deleted}</code>\n» ɴᴏɴ-ᴍᴇᴅɪᴀ ᴍᴇssᴀɢᴇs sᴋɪᴘᴘᴇᴅ - <code>{no_media + unsupported}</code>\n» ᴜɴsᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴇᴅɪᴀ - <code>{unsupported}</code>\n» ᴇʀʀᴏʀs ᴏᴄᴄᴜʀʀᴇᴅ - <code>{errors}</code>**")
                     return
                 current += 1
                 if current % 100 == 0:
                     btn = [[
-                        InlineKeyboardButton('CANCEL', callback_data=f'index#cancel#{chat}#{lst_msg_id}#{skip}')
+                        InlineKeyboardButton('🚫 ᴄᴀɴᴄᴇʟ 🚫', callback_data=f'index#cancel#{chat}#{lst_msg_id}#{skip}')
                     ]]
-                    await msg.edit_text(text=f"Total messages received: <code>{current}</code>\nTotal messages saved: <code>{total_files}</code>\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>\nUnsupported Media: <code>{unsupported}</code>\nErrors Occurred: <code>{errors}</code>", reply_markup=InlineKeyboardMarkup(btn))
+                    await msg.edit_text(text=f"**» ᴛᴏᴛᴀʟ ᴍᴇssᴀɢᴇs ʀᴇᴄᴇɪᴠᴇᴅ - <code>{current}</code>\n» ᴛᴏᴛᴀʟ ᴍᴇssᴀɢᴇs sᴀᴠᴇᴅ - <code>{total_files}</code>\n» ᴅᴜᴘʟɪᴄᴀᴛᴇ ғɪʟᴇs sᴋɪᴘᴘᴇᴅ - <code>{duplicate}</code>\n» ᴅᴇʟᴇᴛᴇᴅ ᴍᴇssᴀɢᴇs sᴋɪᴘᴘᴇᴅ - <code>{deleted}</code>\n» ɴᴏɴ-ᴍᴇᴅɪᴀ ᴍᴇssᴀɢᴇs sᴋɪᴘᴘᴇᴅ - <code>{no_media + unsupported}</code>\n» ᴜɴsᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴇᴅɪᴀ -: <code>{unsupported}</code>\n» ᴇʀʀᴏʀs ᴏᴄᴄᴜʀʀᴇᴅ - <code>{errors}</code>**", reply_markup=InlineKeyboardMarkup(btn))
                     await asyncio.sleep(2)
                 if message.empty:
                     deleted += 1
@@ -136,7 +136,7 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot, skip):
         except FloodWait as e:
             await asyncio.sleep(e.x)
         except Exception as e:
-            await msg.reply(f'Index canceled due to Error - {e}')
+            await msg.reply(f'**ɪɴᴅᴇx ᴄᴀɴᴄᴇʟᴇᴅ ᴅᴜᴇ ᴛᴏ ᴇʀʀᴏʀ - {e}**')
         else:
             time_taken = get_readable_time(time.time()-start_time)
             await msg.edit(f'Succesfully saved <code>{total_files}</code> to Database!\nCompleted in {time_taken}\n\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>\nUnsupported Media: <code>{unsupported}</code>\nErrors Occurred: <code>{errors}</code>')
