@@ -81,19 +81,19 @@ class script(object):
 💮 ɴᴀᴍᴇ - <code>{}</code>
 🆔 ɪᴅ - {}</b>"""
 
-    NEW_GROUP_TXT = """<b>🛄 #ɴᴇᴡɢʀᴏᴜᴘ 🛄 {}
+    NEW_GROUP_TXT = """<b>#New_Group {}
 
-🈳 ɢʀᴏᴜᴘ ɴᴀᴍᴇ - {}
-🆔 ɪᴅ - <code>{}</code>
-🉐 ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ - @{}
-🖇 ɢʀᴏᴜᴘ ʟɪɴᴋ - {}
-🙆🏼‍♀️ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs - <code>{}</code>
-🩲 ᴜsᴇʀ - {} </b>"""
+Group name - {}
+Id - <code>{}</code>
+Group username - @{}
+Group link - {}
+Total members - <code>{}</code>
+User - {}</b>"""
 
     REQUEST_TXT = """<b>📜 ᴜꜱᴇʀ - {}
-    
 📇 ɪᴅ - <code>{}</code>
-🏛 ʀᴇǫᴜᴇꜱᴛ ᴍꜱɢ - <code>{}</code></b>"""  
+
+🎁 ʀᴇǫᴜᴇꜱᴛ ᴍꜱɢ - <code>{}</code></b>"""  
    
     IMDB_TEMPLATE_TXT = """
 <b>📻 ᴛɪᴛʟᴇ - {title}</b>
