@@ -103,10 +103,7 @@ User - {}</b>"""
 <b>❗️ ʟᴀɴɢᴜᴀɢᴇ - {languages}</b>
 """
 
-    FILE_CAPTION = """<b>[{file_name}](https://t.me/mvvaibhav)
-╔════════════════════════╗
-🌼нαρρу ∂σωηℓσα∂ιηg αη∂ ¢σмє αgαιη🌸
-╚════════════════════════╝</b>"""
+    FILE_CAPTION = """<b>{file_name}</b>"""
     
 
     ALRT_TXT = """ᴊᴀʟᴅɪ ʏᴇʜᴀ sᴇ ʜᴀᴛᴏ !"""
