@@ -103,7 +103,7 @@ User - {}</b>"""
 <b>❗️ ʟᴀɴɢᴜᴀɢᴇ - {languages}</b>
 """
 
-    FILE_CAPTION = """<b>{file_name}</b>"""
+    FILE_CAPTION = """<b>[ 𝐓𝐆 :- @SupplyGang30 ] {file_name}</b>"""
     
 
     ALRT_TXT = """ᴊᴀʟᴅɪ ʏᴇʜᴀ sᴇ ʜᴀᴛᴏ !"""
