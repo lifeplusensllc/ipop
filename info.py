@@ -13,20 +13,20 @@ def is_enabled(value, default):
 #---------------------------------------------------------------
 #---------------------------------------------------------------         ,
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+API_ID = int(environ.get('API_ID', '22374490'))
+API_HASH = environ.get('API_HASH', 'cb6be5a35b09f6faf6045c00a3f79e2f')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7505638097:AAH5ArpCOLmlpBbLZQ6ilnsKnEVYqpDkQxA')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6430521').split()]
-USERNAME = environ.get('USERNAME', "https://t.me/i_m_starboy") # ADMIN USERNAME
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-10019926'))
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/hd_request')
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-10024711').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7098873280 7695881110 7463662496 1133736736').split()]
+USERNAME = environ.get('USERNAME', "https://t.me/dhokebaj_Bewafa") # ADMIN USERNAME
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002394687993'))
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/supplygang30')
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002310179585').split()]
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-DATABASE_URI = environ.get('DATABASE_URI', "mongPapkornBot")
-DATABASE_NAME = environ.get('DATABASE_NAME', "ot")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://kuntalm449:hfybxkEUcznkKKMW@cluster0.jt83d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "kuntalm449")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
@@ -35,23 +35,23 @@ LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '0'))
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL','0'))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','0'))
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '0'))
-auth_channel = environ.get('AUTH_CHANNEL', '-772')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001748633461')
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '0'))
 request_channel = environ.get('REQUEST_CHANNEL', '0')
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '0'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/') #Support group link ( make sure bot is admin )
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-IS_VERIFY = is_enabled('IS_VERIFY', True)
+IS_VERIFY = is_enabled('IS_VERIFY', False)
 #---------------------------------------------------------------
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/How_To_Download_28")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
 SHORTENER_API = environ.get("SHORTENER_API", "be8b06de6ed6b96744c6e9746a5796b")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'mdiskshortner.link')
-SHORTENER_API2 = environ.get("SHORTENER_API2", "be8b04de6ed6b96744c6e9746a5796b")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'mdiskshortner.link')
-SHORTENER_API3 = environ.get("SHORTENER_API3", "be8b4de6ed6b96744c6e9746a5796b")
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'mdiskshortner.link')
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'arolinks.com')
+SHORTENER_API2 = environ.get("SHORTENER_API2", "f93636ef4f69b5a0f3e9ceef8a03c04d360e0e11")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'arolinks.com')
+SHORTENER_API3 = environ.get("SHORTENER_API3", "f93636ef4f69b5a0f3e9ceef8a03c04d360e0e11")
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'arolinks.com')
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "300"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "14400"))
 #---------------------------------------------------------------
@@ -68,11 +68,11 @@ REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-START_IMG = (environ.get('START_IMG', 'https://ping.skimpray.site/img/file_177.jpg')).split()
+START_IMG = (environ.get('START_IMG', 'https://vault.pictures/p/aee7f95a3c0f47e890df304b60b89c88')).split()
 FORCESUB_IMG = environ.get('FORCESUB_IMG', 'https://i.ibb.co/ZNC1Hnb/ad3f2c88a8f2.jpg')
 REFER_PICS = (environ.get("REFER_PICS", "https://envs.sh/PSI.jpg")).split() 
 PAYPICS = (environ.get('PAYPICS', 'https://graph.org/file/5b4531bb88bad855e4680.jpg')).split()
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/5b4531bb88bad855e4680.jpg'))
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://vault.pictures/p/aee7f95a3c0f47e890df304b60b89c88'))
 REACTIONS = ["⚡"]
 #---------------------------------------------------------------
 #---------------------------------------------------------------
@@ -81,7 +81,7 @@ FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '600'))
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
 IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', True)
 PORT = environ.get('PORT', '5000')
-MAX_BTN = int(environ.get('MAX_BTN', '8'))
+MAX_BTN = int(environ.get('MAX_BTN', '10'))
 AUTO_DELETE = is_enabled('AUTO_DELETE', True)
 DELETE_TIME = int(environ.get('DELETE_TIME', 1200))
 IMDB = is_enabled('IMDB', False)
